@@ -12,11 +12,8 @@ class App extends React.Component {
 
   componentDidMount() {
     axios.get("http://localhost:5000/api/players")
-      // .then(res => {
-      //   res.json();
-      // })
+     
       .then(res => {
-        console.log(res)
         this.setState({players: res.data}, () => console.log(this.state.players)
         );
       })
